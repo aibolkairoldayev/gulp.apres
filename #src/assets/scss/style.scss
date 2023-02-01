@@ -1,0 +1,14 @@
+@import 'normalize';
+@import 'globals';
+@import 'header';
+
+.fv_center {
+  @include flex(d, center, d);
+}
+.f_center {
+  @include flex(d, center, center);
+}
+.bg_image {
+  position: absolute;
+  z-index: -1;
+}

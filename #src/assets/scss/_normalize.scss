@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.main {
+    min-height: 1000px;
+    
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+a, button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input,textarea {
+    background: none;
+    border: none;
+    outline: none;
+}
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 0rem;
+    padding-left: 0rem;
+    li {
+        list-style-type: none;
+    }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0rem;
+    font-weight: 500;
+    line-height: 1;
+    cursor: default;
+}
+
+img {
+    max-width: 100%;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .4s ease;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.btn-check:focus + .btn,
+.btn:focus {
+    box-shadow: none;
+}
+
+//scrollbar
+select::-ms-expand {
+  width: 10px;
+  height: 4px;
+  color: #000000;
+  padding-left: 7px;
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+  @media (max-width: 576px) {
+    width: 3px;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2c6598;
+  opacity: .5;
+  //padding-top: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  //background-color: #ddd;
+}
+@mixin flex($fd, $al, $jf) {
+  display: flex;
+  @if($fd == d) {
+    flex-direction: row;
+  }
+  @else {
+    flex-direction: $fd;
+  }
+  @if($al == d) {}
+  @else {
+    align-items: $al;
+  }
+  @if($jf == d) {}
+  @else {
+    justify-content: $jf;
+  }
+}
+@mixin grid($num, $as, $js, $gg) {
+  display: grid;
+  $b: 1fr;
+  @for $i from 1 through $num - 1 {
+    $b: $b + ' ' + #{1fr};
+  }
+  @if($num == 1) {
+    grid-template-columns: 1fr;
+  }
+  @else {
+    grid-template-columns: #{$b};
+  }
+  @if($as == d) {}
+  @else {
+    align-items: $as;
+  }
+  @if($js == d) {}
+  @else {
+    justify-items: $js;
+  }
+  @if($gg == d) {}
+  @else {
+    grid-gap: #{$gg};
+  }
+}

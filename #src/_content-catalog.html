@@ -1,0 +1,360 @@
+<div class="bread">
+    <div class="container">
+        <div class="route">
+            <a href="./" class="route__older">
+                Главная
+            </a>
+            <div class="route__slesh">
+                <img src="./assets/img/aboutPage/arrow-bread.svg" alt="" class="img">
+            </div>
+            <a href="./articles.html" class="route__older">
+                Каталог
+            </a>
+            <div class="route__slesh">
+                <img src="./assets/img/aboutPage/arrow-bread.svg" alt="" class="img">
+            </div>
+            <div class="route__current">
+                Трансформаторы тока
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="catalogPage">
+    <div class="container">
+        <div class="catalog__content">
+            <div class="catalog__left">
+                <div class="catalog__adv" style="background-image: url(./assets/img/catalogPage/catalog-bg.png) ; ">
+                    <div class="catalog__adv-title">
+                        Не хотите тратить время на подбор?
+                    </div>
+                    <div class="catalog__adv-text">Мы сделаем это за Вас</div>
+                    <button class="catalog__adv-btn yellowBtn" onclick="">Оставить заявку</button>
+                </div>
+                <div class="catalog__price">
+                    <button class="catalog__clear">Очистить</button>
+                    <div class="catalog__price-title">Цена</div>
+                    <div class="catalog__price-range">
+                        <div class="price-input">
+                            <div class="field">
+                                <span>От</span>
+                                <input type="number" class="input-min" value="10">
+                            </div>
+                            <div class="field">
+                                <span>До</span>
+                                <input type="number" class="input-max" value="800000">
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="range-min" min="0" max="800000" value="100" step="10">
+                            <input type="range" class="range-max" min="0" max="800000" value="800000" step="10">
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__options">
+                    <div class="catalog__option">
+                        <div class="catalog__option-title" id="option1">Количество учетных фаз</div>
+                        <div class="catalog__option-content" id="content1">
+                            <div class="catalog__option-input">
+                                <input type="checkbox">
+                                <label for="">Двухфазный</label>
+                            </div>
+                            <div class="catalog__option-input">
+                                <input type="checkbox">
+                                <label for="">Трехфазный</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__option">
+                        <div class="catalog__option-title" id="option2">Номинальное вторичное напряжение</div>
+                        <div class="catalog__option-content" id="content1">
+                            <div class="catalog__option-input">
+                                <input type="checkbox">
+                                <label for="">Двухфазный</label>
+                            </div>
+                            <div class="catalog__option-input">
+                                <input type="checkbox">
+                                <label for="">Трехфазный</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__option">
+                        <div class="catalog__option-title" id="option3">Номинальный первичный ток</div>
+                        <div class="catalog__option-content" id="content3">
+                            <div class="catalog__option-input">
+                                <input type="checkbox">
+                                <label for="">Двухфазный</label>
+                            </div>
+                            <div class="catalog__option-input">
+                                <input type="checkbox">
+                                <label for="">Трехфазный</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__right">
+                <div class="catalog__filters">
+                    <div class="catalog__filter">
+                        <span>Счетчики учета электроэнергии</span>
+                        <img src="./assets/img/icons/x-white.svg" alt="icon">
+                    </div>
+                    <div class="catalog__filter">
+                        <span>Трансформаторы тока</span>
+                        <img src="./assets/img/icons/x-white.svg" alt="icon">
+                    </div>
+                    <div class="catalog__filter">
+                        <span> Щиты в сборе</span>
+                        <img src="./assets/img/icons/x-white.svg" alt="icon">
+                    </div>
+                    <div class="catalog__filter">
+                        <span>Роутеры, модемы</span>
+                        <img src="./assets/img/icons/x-white.svg" alt="icon">
+                    </div>
+                    <div class="catalog__filter">
+                        <span>Автоматы, рубильники</span>
+                        <img src="./assets/img/icons/x-white.svg" alt="icon">
+                    </div>
+                    <div class="catalog__filter">
+                        <span>Линейная арматура для СИП</span>
+                        <img src="./assets/img/icons/x-white.svg" alt="icon">
+                    </div>
+                    <div class="catalog__filter">
+                        <span>Электроустановочные изделия</span>
+                        <img src="./assets/img/icons/x-white.svg" alt="icon">
+                    </div>
+                    <div class="catalog__filter">
+                        <span>Инструменты и приспособления</span>
+                        <img src="./assets/img/icons/x-white.svg" alt="icon">
+                    </div>
+                    <div class="catalog__filter">
+                        <span>Новинки</span>
+                        <img src="./assets/img/icons/x-white.svg" alt="icon">
+                    </div>
+                    <div class="catalog__filter">
+                        <span>Разное</span>
+                        <img src="./assets/img/icons/x-white.svg" alt="icon">
+                    </div>
+                </div>
+                <div class="catalog__sorts">
+                    <div class="catalog__name">
+                        <span>Трансформаторы тока</span>
+                        <b>14</b>
+                    </div>
+                    <div class="catalog__sorting">
+                        <span>Сортировать по:</span>
+                        <select>
+                            <option value="">Убыванию цены</option>
+                            <option value="">Возрастанию цены</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="catalog__items">
+                    <div class="catalog__item">
+                        <div class="catalog__item-new">NEW</div>
+                        <div class="catalog__item-content">
+                            <div class="catalog__item-top">
+                                <a href="#">
+                                    <div class="catalog__item-img">
+                                        <picture>
+                                            <img src="./assets/img/catalogPage/catalog1.png" alt="image">
+                                            <source srcset="./assets/img/catalogPage/catalog1.webp" type="image/webp">
+                                            <source srcset="./assets/img/catalogPage/catalog1.webp" type="image/pjp2">
+                                        </picture>
+                                    </div>
+                                    <div class="catalog__item-title">
+                                        4298_716_Счетчик Э.Э. Дала
+                                    </div>
+                                    <div class="catalog__item-text">СА4У-Э720 Р TX IP P П RS Д G-PLC</div>
+                                </a>
+                            </div>
+                            <div class="catalog__item-bot">
+                                <div class="catalog__item-price">
+                                    <span>В наличии</span>
+                                    <b>50000тг.</b>
+                                </div>
+                                <div class="catalog__item-buttons">
+                                    <button>Заказать</button>
+                                    <a href="">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__item-new">NEW</div>
+                        <div class="catalog__item-content">
+                            <div class="catalog__item-top">
+                                <a href="#">
+                                    <div class="catalog__item-img">
+                                        <picture>
+                                            <img src="./assets/img/catalogPage/catalog2.png" alt="image">
+                                            <source srcset="./assets/img/catalogPage/catalog2.webp" type="image/webp">
+                                            <source srcset="./assets/img/catalogPage/catalog2.webp" type="image/pjp2">
+                                        </picture>
+                                    </div>
+                                    <div class="catalog__item-title">
+                                        11_Трансформатор
+                                    </div>
+                                    <div class="catalog__item-text">Т-0,66 150-5</div>
+                                </a>
+                            </div>
+                            <div class="catalog__item-bot">
+                                <div class="catalog__item-price">
+                                    <span>В наличии</span>
+                                    <b>45000тг.</b>
+                                </div>
+                                <div class="catalog__item-buttons">
+                                    <button>Заказать</button>
+                                    <a href="">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__item-new">NEW</div>
+                        <div class="catalog__item-content">
+                            <div class="catalog__item-top">
+                                <a href="#">
+                                    <div class="catalog__item-img">
+                                        <picture>
+                                            <img src="./assets/img/catalogPage/catalog3.png" alt="image">
+                                            <source srcset="./assets/img/catalogPage/catalog3.webp" type="image/webp">
+                                            <source srcset="./assets/img/catalogPage/catalog3.webp" type="image/pjp2">
+                                        </picture>
+                                    </div>
+                                    <div class="catalog__item-title">
+                                        Т-0,66 150-5
+                                    </div>
+                                    <div class="catalog__item-text">GPRS iRZ ATM21.A</div>
+                                </a>
+                            </div>
+                            <div class="catalog__item-bot">
+                                <div class="catalog__item-price">
+                                    <span>В наличии</span>
+                                    <b>40000тг.</b>
+                                </div>
+                                <div class="catalog__item-buttons">
+                                    <button>Заказать</button>
+                                    <a href="">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__item-new">NEW</div>
+                        <div class="catalog__item-content">
+                            <div class="catalog__item-top">
+                                <a href="#">
+                                    <div class="catalog__item-img">
+                                        <picture>
+                                            <img src="./assets/img/catalogPage/catalog4.png" alt="image">
+                                            <source srcset="./assets/img/catalogPage/catalog4.webp" type="image/webp">
+                                            <source srcset="./assets/img/catalogPage/catalog4.webp" type="image/pjp2">
+                                        </picture>
+                                    </div>
+                                    <div class="catalog__item-title">
+                                        4323_Выключатель
+                                    </div>
+                                    <div class="catalog__item-text">ИЭК 3Р 25А</div>
+                                </a>
+                            </div>
+                            <div class="catalog__item-bot">
+                                <div class="catalog__item-price">
+                                    <span>В наличии</span>
+                                    <b>35000тг.</b>
+                                </div>
+                                <div class="catalog__item-buttons">
+                                    <button>Заказать</button>
+                                    <a href="">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__item-new">NEW</div>
+                        <div class="catalog__item-content">
+                            <div class="catalog__item-top">
+                                <a href="#">
+                                    <div class="catalog__item-img">
+                                        <picture>
+                                            <img src="./assets/img/catalogPage/catalog2.png" alt="image">
+                                            <source srcset="./assets/img/catalogPage/catalog2.webp" type="image/webp">
+                                            <source srcset="./assets/img/catalogPage/catalog2.webp" type="image/pjp2">
+                                        </picture>
+                                    </div>
+                                    <div class="catalog__item-title">
+                                        4323_Выключатель
+                                    </div>
+                                    <div class="catalog__item-text">ИЭК 3Р 25А</div>
+                                </a>
+                            </div>
+                            <div class="catalog__item-bot">
+                                <div class="catalog__item-price">
+                                    <span>В наличии</span>
+                                    <b>30000тг.</b>
+                                </div>
+                                <div class="catalog__item-buttons">
+                                    <button>Заказать</button>
+                                    <a href="">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__item-new">NEW</div>
+                        <div class="catalog__item-content">
+                            <div class="catalog__item-top">
+                                <a href="#">
+                                    <div class="catalog__item-img">
+                                        <picture>
+                                            <img src="./assets/img/catalogPage/catalog1.png" alt="image">
+                                            <source srcset="./assets/img/catalogPage/catalog1.webp" type="image/webp">
+                                            <source srcset="./assets/img/catalogPage/catalog1.webp" type="image/pjp2">
+                                        </picture>
+                                    </div>
+                                    <div class="catalog__item-title">
+                                        4298_716_Счетчик Э.Э. Дала
+                                    </div>
+                                    <div class="catalog__item-text">СА4У-Э720 Р TX IP P П RS Д G-PLC</div>
+                                </a>
+                            </div>
+                            <div class="catalog__item-bot">
+                                <div class="catalog__item-price">
+                                    <span>В наличии</span>
+                                    <b>6000тг.</b>
+                                </div>
+                                <div class="catalog__item-buttons">
+                                    <button>Заказать</button>
+                                    <a href="">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <div class="pagination-page">
+                        <a href="catalog.html">1</a>
+                    </div>
+                    <div class="pagination-page">
+                        <a href="catalog.html">2</a>
+                    </div>
+                    <div class="pagination-page">
+                        <a href="catalog.html">3</a>
+                    </div>
+                    <div class="pagination-page">
+                        <a href="catalog.html">4</a>
+                    </div>
+                    <div class="pagination-page">
+                        ...
+                    </div>
+                    <div class="pagination-page">
+                        <a href="catalog.html">8</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

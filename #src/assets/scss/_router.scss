@@ -1,0 +1,40 @@
+.route {
+  padding-top: 40px;
+  @media (max-width: 992px) {
+    padding-top: 20px;
+  }
+  display: flex;
+  align-items: center;
+  @media (max-width: 992px) {
+    flex-wrap: wrap;
+  }
+  &__older {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #606060;
+    @media (max-width: 576px) {
+      font-size: 14px;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: .8;
+    }
+  }
+
+  &__slesh {
+    margin: 0 15px 5px 10px;
+  }
+
+  &__current {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    @media (max-width: 576px) {
+      font-size: 14px;
+    }
+  }
+}
