@@ -169,6 +169,7 @@
     }
     .right {
       .socials {
+      
         &_contacts {
           @include grid(1, center, d, 20px 0px);
           margin-top: 43px;
@@ -230,6 +231,10 @@
       margin-bottom: 30px;
     }
     .socials {
+      @media (max-width: 576px) {
+        display: block;
+        width: 100%;
+      }
       @include flex(d, center, flex-end);
       .item {
         margin-right: 20px;
@@ -255,6 +260,9 @@
           line-height: 16px;
           color: #252525;
           max-width: 153.73px;
+          @media (max-width: 576px) {
+            max-width: unset;
+          }
         }
       }
     }

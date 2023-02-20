@@ -50,14 +50,14 @@ if ($('.catalogBtn').length != 0) {
   }
   else {
     $('.catalogBtn').click(() => {
-      if ($('.catalogBtn img').attr('src') === './assets/img/icons/close.svg') {
-        $('.catalogBtn img').attr('src', './assets/img/icons/menu-icon-white.svg');
+      if ($('.catalogBtn img').attr('src') === './assets/img/icons/menu-icon-white.svg') {
+        $('.catalogBtn img').attr('src', './assets/img/icons/close.svg');
         $('.catalogBtn img').css('width', '18px');
         $('.sidebar').toggleClass('sidebar_bloor--clickIn');
         $('body').css('overflow', 'hidden');
       }
       else {
-        $('.catalogBtn img').attr('src', './assets/img/icons/close.svg');
+        $('.catalogBtn img').attr('src', './assets/img/icons/menu-icon-white.svg');
         $('.catalogBtn img').css('width', '10px');
         $('.sidebar').toggleClass('sidebar_bloor--clickIn');
         $('body').css('overflow', 'auto');
@@ -153,16 +153,15 @@ if ($('.accordion').length != 0) {
   }
 }
 
-// Задается отступ слева для слайдера докторов и отступ справа для доктора на главной странице 
+// Задается отступ слева для фото директора на странице о компании 
 
 function containerWidth() {
   let containerWidth = $('#containerW').width();
   let windowWidth = $(window).width();
   let marginLeft = ((windowWidth - containerWidth) / 2) + 'px';
-  let docRight = ((windowWidth - containerWidth) / 2) - 140 + 'px';
   $('.director__photo').css('marginLeft', marginLeft);
-  if ($(window).width() > 2000) {
-    $('.director__photo').css('marginRight', docRight);
+  if ($(window).width() < 768) {
+    $('.director__photo').css('marginLeft', 0);
   }
 
 }
@@ -181,7 +180,6 @@ if ($('.catalog__option').length != 0) {
   for (let index = 0; index < $('.catalog__option').length; index++) {
     $('.catalog__option').eq(index).children('.catalog__option-title').click(() => {
       if (!$('.catalog__option').eq(index).hasClass('active')) {
-        $('.catalog__option').removeClass('active');
         $('.catalog__option').eq(index).toggleClass('active');
       }
       else {
@@ -195,9 +193,37 @@ if ($('.catalog__option').length != 0) {
 if ($('.catalog__filter').length != 0) {
   for (let index = 0; index < $('.catalog__filter').length; index++) {
     $('.catalog__filter').eq(index).click(() => {
-      $('.catalog__filter').eq(index).toggleClass('active');
+      if ($('.catalog__filter').eq(index).hasClass('active')) {
+        $('.catalog__filter').removeClass('active');
+      }
+      else {
+        $('.catalog__filter').removeClass('active');
+        $('.catalog__filter').eq(index).toggleClass('active');
+      }
     });
   }
+}
+
+// Связка фильтров и категорий 
+
+let categoryCount = $('.catalog__filter').length
+console.log(categoryCount);
+for (let index = 0; index < $('.catalog__filter').length; index++) {
+  $('.catalog__filter').eq(index).click(() => {
+    for (i = 0; i < categoryCount; i++) {
+      if ($(`.category${i}`).length > 0) {
+        if ($(`#category${i}`).hasClass('active')) {
+          $(`.category${i}`).css('display', 'block')
+        }
+        else {
+          $(`.category${i}`).css('display', 'none')
+        }
+      }
+      else {
+
+      }
+    }
+  });
 }
 
 // Табы на странице карточка товара
@@ -228,7 +254,6 @@ priceInput.forEach((input) => {
   input.addEventListener("input", (e) => {
     let minPrice = parseInt(priceInput[0].value),
       maxPrice = parseInt(priceInput[1].value);
-
     if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
       if (e.target.className === "input-min") {
         rangeInput[0].value = minPrice;
@@ -260,6 +285,102 @@ rangeInput.forEach((input) => {
     }
   });
 });
+
+
+// Отступ сверху для блока партнеры
+
+if ($('.homePage').length === 0) {
+  $('.homePage_block4.partners .container').css('paddingTop', 10);
+  $('.homePage_block4.partners').css('height', 400 + 'px');
+  $('.homePage_block4.partners ').css('margin-top', 10 + 'px');
+}
+
+
+// Открытие и закрытие модалки "Спасибо"
+
+function openThanks() {
+  $('#thanks-modal').css('display', 'block');
+  $('body').css('overflow', 'hidden');
+}
+
+function closeThanks() {
+  $('#thanks-modal').css('display', 'none');
+  $('body').css('overflow', 'unset');
+}
+
+$('.thanks__wrapper').click(function (event) {
+  if (!$(event.target).is('review__content')) {
+    $('#thanks-modal').css('display', 'none');
+    $('body').css('overflow', 'unset');
+  }
+});
+
+
+// Открытие и закрытие модалки "Заказа консультации"
+
+function openRequest() {
+  $('#request-modal').css('display', 'block');
+  $('body').css('overflow', 'hidden');
+}
+
+function closeRequest() {
+  $('#request-modal').css('display', 'none');
+  $('body').css('overflow', 'unset');
+}
+
+$('.request__wrapper').click(function (event) {
+  if (!$(event.target).is('request__content')) {
+    $('#request-modal').css('display', 'none');
+    $('body').css('overflow', 'unset');
+  }
+});
+
+function pressSubmit() {
+  closeRequest();
+  setTimeout(openThanks(), 2000)
+}
+
+
+// Фильтры выскакивают слева в мобильной версий
+
+if ($('.catalog__filterMobile-name').length != 0) {
+  $('.catalog__filterMobile-name').click(() => {
+    $('.catalog__filterMobile-name').toggleClass('active');
+    $('.catalog__filterDesktop').toggleClass('active');
+    if ($('.catalog__categoriesMobile-name').hasClass('active')) {
+      $('.catalog__categoriesMobile-name').toggleClass('active');
+      $('.catalog__categoriesDesktop').toggleClass('active');
+    }
+  })
+}
+
+
+// Категории выскакивают справа в мобильной версий
+
+if ($('.catalog__categoriesMobile-name').length != 0) {
+  $('.catalog__categoriesMobile-name').click(() => {
+    $('.catalog__categoriesMobile-name').toggleClass('active');
+    $('.catalog__categoriesDesktop').toggleClass('active');
+    if ($('.catalog__filterMobile-name').hasClass('active')) {
+      $('.catalog__filterMobile-name').toggleClass('active');
+      $('.catalog__filterDesktop').toggleClass('active');
+    }
+  })
+}
+
+
+// Очистка диапазона цен
+
+if ($('.catalog__clear').length != 0) {
+  $('.catalog__clear').click(() => {
+    $('.slider .progress').css('left', '0');
+    $('.slider .progress').css('right', '0');
+    rangeInput[0].value = 0;
+    rangeInput[1].value = rangeInput[1].max;
+    $('.price-input .field .input-min')[0].value = 10;
+    $('.price-input .field .input-max')[0].value = rangeInput[1].max;
+  })
+}
 
 // if($('.dropdown').length != 0) {
 //   for (let i = 0; i < $('.dropdown').length; i++) {

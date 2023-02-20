@@ -434,14 +434,9 @@
             <div class="route__slesh">
                 <img src="./assets/img/aboutPage/arrow-bread.svg" alt="" class="img">
             </div>
-            <a href="catalog.html" class="route__older">
-                Трансформаторы тока
-            </a>
-            <div class="route__slesh">
-                <img src="./assets/img/aboutPage/arrow-bread.svg" alt="" class="img">
-            </div>
+
             <div class="route__current">
-                Стоит ли заменять автоматический выключатель, если он выбивает?
+                Трансформатор тока Т-0,66-УЗ (2000 А)
             </div>
         </div>
     </div>
@@ -686,12 +681,8 @@
                             </p>
                         </div>
                     </div>
-
-
                 </div>
-
             </div>
-
         </div>
     </div>
 </div>
@@ -709,7 +700,7 @@
         <form action="#" method="POST">
             <input type="text" name="name" placeholder="Имя" required>
             <input type="tel" name="phone_number" placeholder="Телефон" required>
-            <input type="text" name="organization_name" placeholder="Название организации" required>
+            <input type="text" name="organization_name" placeholder="Название организации">
             <button>Отправить</button>
         </form>
     </div>
@@ -803,11 +794,11 @@
       <div class="left">
         <div>© 2022 Апрес</div>
         <div>Все права защищены.</div>
-        <a href="#">Политика конфиденциальности</a>
+        <a href="policy.html">Политика конфиденциальности</a>
       </div>
       <a class="right" href='https://i-marketing.kz/' target="_blank">
         <div>Разработано</div>
-        <img src="./assets/img/icons/imarketing.svg" alt="">
+        <img src="./assets/img/icons/imarketing.svg" alt="" loading="lazy">
       </a>
     </div>
   </div>
@@ -821,61 +812,51 @@
   </div>
 </div>
 
-    <!--<div class="multiModal_bloor"></div>-->
-<!--<div class="multiModal multiModal&#45;&#45;header">-->
-<!--  <img src="./assets/img/icons/close.svg" alt="" class="multiModal_close">-->
-<!--  <div class="modalHeader">-->
-<!--    <div class="item_title">Оставьте заявку для получения обратной связи</div>-->
-<!--    <div class="item_desc">Введите свои данные и мы свяжемся с Вами:</div>-->
-<!--    <form method="POST" action="#" class="item">-->
-<!--      <div class="box">-->
-<!--        <div class="input">-->
-<!--          <img src="./assets/img/icons/user.svg" alt="">-->
-<!--          <input type="text" placeholder="Ваше имя" required>-->
-<!--        </div>-->
-<!--        <div class="input">-->
-<!--          <img src="./assets/img/icons/phoneNumber.svg" alt="">-->
-<!--          <input type="number" placeholder="Номер телефона*" required>-->
-<!--        </div>-->
-<!--        <div class="input">-->
-<!--          <img src="./assets/img/icons/email3.svg" alt="">-->
-<!--          <input type="email" placeholder="E-mail*" required>-->
-<!--        </div>-->
-<!--        <div class="select">-->
-<!--          <select name="type">-->
-<!--            <option>test1</option>-->
-<!--            <option>test2</option>-->
-<!--            <option>test3</option>-->
-<!--            <option>test4</option>-->
-<!--          </select>-->
-<!--          <img src="./assets/img/icons/select2.svg" alt="" loading="lazy">-->
-<!--        </div>-->
-<!--        <div class="textarea">-->
-<!--          <img src="./assets/img/icons/comment.svg" alt="">-->
-<!--          <textarea placeholder="Комментарий" maxlength="200" required></textarea>-->
-<!--        </div>-->
-<!--        <div class="box_col">-->
-<!--          <button type="submit">Отправить</button>-->
-<!--          <div class="confidence">Подтверждая отправку формы Я соглашаюсь на обработку персональных данных и с их-->
-<!--            <a  href="#">политикой конфиденциальности</a>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </form>-->
-<!--  </div>-->
-<!--</div>-->
-<!--<div class="multiModal multiModal&#45;&#45;thanks">-->
-<!--  <img src="./assets/img/icons/close.svg" alt="" class="multiModal_close">-->
-<!--  <div class="thanks">-->
-<!--    <div class="box">-->
-<!--      <img src="./assets/img/icons/thanks.svg" alt="">-->
-<!--      <p class="thanks_title">Ваша заявка успешно отправлена</p>-->
-<!--    </div>-->
-<!--    <div class="thanks_desc">В ближайшее время наш менеджер свяжется с Вами</div>-->
-<!--  </div>-->
-<!--</div>-->
+    <div class="thanks-modal" id="thanks-modal">
+    <div class="thanks__wrapper">
+    </div>
+    <div class="thanks__content">
+        <div class="thanks__bg">
+            <img src="./assets/img/aboutPage/about-bg1.svg" alt="image">
+        </div>
+        <div class="thanks__close" onclick="closeThanks()">
+            <img src="./assets/img/icons/close.svg" alt="icon">
+        </div>
+        <div class="thanks__title">
+            <img src="./assets/img/icons/checked-yellow.svg" alt="icon">
+            <b>Ваша заявка успешно отправлена</b>
+        </div>
+        <div class="thanks__text">В ближайшее время наш специалист свяжется с Вами</div>
+        <div class="thanks__link">
+            <a href="./catalog.html">
+                Вернуться назад
+            </a>
+        </div>
+    </div>
+</div>
 
-    <script src="./assets/js/axios.min.js"></script>
+<div class="request-modal" id="request-modal">
+    <div class="request__wrapper">
+    </div>
+    <div class="request__content">
+        <div class="request__close" onclick="closeRequest()">
+            <img src="./assets/img/icons/close.svg" alt="icon">
+        </div>
+        <div class="request__title">Оставить заявку на подбор</div>
+        <div class="request__text">Получите профессиональную консультацию от специалистов компании</div>
+        <div class="request__form">
+            <form action="">
+                <div class="request__inputs-top">
+                    <input type="text" placeholder="Имя">
+                    <input type="number" placeholder="Телефон">
+                </div>
+                <input type="text" placeholder="Название организации">
+                <button class="yellowBtn" onclick="pressSubmit()" type="">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+    <script src="./assets/js/axios.min.js" defer></script>
 <script src="./assets/js/jquery-3.2.1.min.js" defer></script>
 <script src="./assets/js/mask.min.js" defer></script>
 <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>

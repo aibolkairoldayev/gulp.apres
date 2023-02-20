@@ -21,12 +21,29 @@
         return "\\d{1," + a.length + "}";
       }).replace(/[+()]/g, "\\$&");
     reg = new RegExp("^" + reg + "$");
-    if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = newValue;
-    if (event.type == "blur" && this.value.length < 5) this.value = "";
+    if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
+      this.value = newValue;
+      $(this).css('border-bottom', '1px solid red');
+    }
+    if (event.type == "blur" && this.value.length < 18) {
+      this.value = "";
+      $(this).css('border-bottom', '1px solid red');
+    }
+    if (event.type == "mouseleave" && this.value.length < 18) {
+      this.value = "";
+      $(this).css('border-bottom', '1px solid red');
+    }
+    if(event.type = 'keydown' && this.value.length === 18) {
+      $(this).css('border-bottom', '1px solid #006994');
+    }
+    else {
+      $(this).css('border-bottom', '1px solid red');
+    }
   }
 
   input.addEventListener("input", mask, false);
   input.addEventListener("focus", mask, false);
   input.addEventListener("blur", mask, false);
   input.addEventListener("keydown", mask, false);
+  input.addEventListener("mouseleave", mask, false);
 });
